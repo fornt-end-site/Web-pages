@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            font-family: sans-serif;
+
+        }
+
+        .header {
+            height: 100vh;
+            width: 100%;
+            padding: 0% 10px;
+
+            background-size: cover;
+            position: relative;
+
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 100px;
+            padding: 10px;
+            border-radius: 40px;
+
+
+
+        }
+
+        .menu {
+
+            padding: 28px 0;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin: 0 15px
+        }
+
+        .menu li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        .menu li a::after {
+            content: '';
+            background: #ff3d00;
+            width: 0;
+            height: 2px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: width 0.5s;
+        }
+
+        .menu li a:hover::after {
+            width: 100%;
+        }
+
+        .btn {
+            background: #ff3d00;
+            color: rgb(17, 82, 167);
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .cotnent {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 90%;
+            max-width: 900px;
+            color: #fff;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding-top: 50px;
+
+        }
+
+        .cotnent h1 {
+            font-size: 60px;
+            font-weight: 600;
+            margin-bottom: 40px;
+
+
+
+        }
+
+        .cotnent form {
+
+            background: #fff;
+            border-radius: 60px;
+            padding: 10px;
+            display: flex;
+        }
+
+        .cotnent form input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 0 20px;
+            font-size: 18px;
+
+        }
+
+        .cotnent form button {
+            background: #ff3d00;
+            color: #fff;
+            border: none;
+            border-radius: 60px;
+            padding: 15px 40px;
+            cursor: pointer;
+
+        }
+
+        .lists {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+
+
+        }
+
+        .list-1 {
+            width: 80px;
+            height: 80px;
+            background: rgba(225, 61, 0, 0.15);
+            margin: 0 15px;
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 20px;
+        }
+
+        .list-1 img {
+            width: 50px;
+            margin-bottom: 5px;
+            border-radius: 6px;
+
+        }
+
+        .back-video {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+        }
+
+        @media(min-aspect-ratio:16/9) {
+            .back-video {
+                width: 100%;
+                height: auto;
+            }
+
+        }
+
+        @media(max-aspect-ratio:16/9) {
+            .back-video {
+                width: auto;
+                height: 100%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <video autoplay loop muted class="back-video" plays-inline>
+            <source
+                src="https://www.pexels.com/video/3130182/download/?search_query=&tracking_id=vcuyx3trl7g?search_query=&tracking_id=vcuyx3trl7g"
+                type="video/mp4">
+        </video>
+        <nav>
+            <img src="https://images.unsplash.com/photo-1496200186974-4293800e2c20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bG9nb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                class="logo">
+
+            <ul class="menu">
+                <li><a href="#"> Home</a> </li>
+                <li><a href="#"> Gallary</a> </li>
+                <li><a href="#"> About</a></li>
+                <li><a href="#"> Contact</a></li>
+                <li class="btn"> <a href="https://www.youtube.com/watch?v=tDhPB5HWcho&t=6118s"> Sign up</a></li>
+            </ul>
+        </nav>
+
+        <div class="cotnent">
+            <h1>Welcome to Coding sides</h1>
+            <form>
+                <input type="text" placeholder="&#x270e search">
+                <button type="submit"> search</button>
+            </form>
+
+            <div class="lists">
+                <div class="list-1"> <a href=" https://www.facebook.com/">
+                        <img src="data:image/jpeg;base64,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"
+                            class="facebook"> </a>
+                    <p>facebook</p>
+                </div>
+                <div class="list-1">
+                    <a href="https://www.instagram.com/?hl=en">
+                        <img src="https://images.unsplash.com/photo-1611262588024-d12430b98920?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                            class="instagram"></a>
+
+                    <p>instagram</p>
+                </div>
+                <div class="list-1"> <a href="https://mail.google.com/mail/u/0/#inbox">
+                    <img src="https://i.gadgets360cdn.com/large/gmail_thumb_1615466143940.jpg" class="G-mail"> </a>
+                    <p> G-maile</p>
+                </div>
+                <div class="list-1"> <a href="https://twitter.com/i/flow/login">
+                        <img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                            class="twitter"> </a>
+                    <p>twitter</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
